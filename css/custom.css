@@ -1,0 +1,313 @@
+body {
+    background-color: #000;
+    font-family: "raleway", sans-serif;
+}
+
+/*
+    HEADER 
+*/
+
+.logo img {
+    max-width: 12em;
+    max-height: 3em;
+}
+
+/*
+    HOME
+*/
+
+.home-row {
+    opacity: 0.8;
+    display: flex;
+    flex-direction: row;
+    transition: opacity .3s;
+}
+
+.home-row:hover {
+    opacity: 1;
+}
+
+.home-row:hover .home-image a {
+    transform: scale(1.1);
+}
+
+.home-row:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.home-panel {
+    background-color: #fff;
+    text-align: center;
+    padding: 0 5.55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 330px;
+}
+
+.home-panel h2 a {
+    color: #4d4d4d;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.home-panel h2::after {
+    content: ' ';
+    display: block;
+    width: 4em;
+    background-color: #4d4d4d;
+}
+
+.home-panel p {
+    margin-bottom: 10px;
+}
+
+.home-panel a,
+.home-panel a:hover {
+    text-transform: uppercase;
+    color: #4d4d4d;
+    font-weight: 700;
+    text-decoration: none;
+    transition: opacity .25s;
+}
+
+.home-panel a:hover {
+    opacity: 0.7;
+}
+
+.home-image {
+    padding: 0;
+    overflow: hidden;
+}
+
+.home-image a {
+    width: 100%;
+    display: block;
+    background-size: cover;
+    min-height: 330px;
+    transition: all .7s;
+}
+
+/*
+    WORK
+*/
+
+.work-image {
+    background-size: cover;
+    min-height: 330px;
+    border: 15px solid #000;
+    border-top:0;
+    border-bottom:0;
+}
+
+.work-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 15px solid #000;
+    border-top:0;
+    border-bottom:0;
+}
+
+.work-body .spacer {
+    content: ' ';
+    display: block;
+    margin: 4em auto 1em;
+    width: 4em;
+    height: 0.35em;
+    background-color: #4d4d4d;
+}
+
+.work-body blockquote p {
+    width: 100%;
+}
+
+/*
+    FOOTER
+*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: .6;
+    letter-spacing: 1px;
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+    
+    /*
+       MOBILE: HEADER
+    */
+    .header {
+        padding: 17px 15px 10px 15px;
+    }
+
+    .logo img {
+        max-width: 8em;
+        max-height: 3em;
+    }
+
+    /*
+       MOBILE: HOME
+    */
+    .home-row {
+        opacity: 1;
+        padding: 0 15px;
+        margin-bottom: 15px;
+    }
+
+    .home-panel {
+        opacity: 0.9;
+    }
+
+    .home-panel {
+        min-height: 270px;
+    }
+
+    .home-panel h2 a {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .home-panel h2::after {
+        margin: 0.5em auto 0;
+        width: 3em;
+        height: 0.12em;
+    }
+
+    .home-panel p {
+        font-size: 14px;
+    }
+
+    .home-image a {
+        min-height: 250px;
+    }
+
+    /*
+        MOBILE: WORK
+    */
+
+    .work-image {
+        display: block;
+    }
+
+    .work-body p,
+    .work-body blockquote {
+        width: 80%;
+    }
+
+    .work-body .spacer {
+        margin: 2em auto 0.5em;
+        height: 0.19em;
+    }
+
+    /*
+        FOOTER
+    */
+
+    footer {
+        padding: 25px 0 15px 0;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 600px) {
+    
+    /*
+        TABLET: HEADER
+    */
+    .header {
+        padding: 40px 15px 25px 15px;
+    }
+
+    /*
+        TABLET: HOME
+    */
+    .home-row {
+        opacity: 1;
+        padding: 0 15px;
+        margin-bottom: 15px;
+    }
+
+    .home-panel {
+        opacity: 0.9;
+    }
+
+    /*
+        TABLET: WORK
+    */
+
+    .work-image {
+        min-height: 400px;
+    }
+
+    .work-body p,
+    .work-body blockquote {
+        width: 70%;
+    }
+
+    .work-body .spacer {
+        margin: 3em auto 0.8em;
+        height: 0.25em;
+    }
+
+    /*
+        TABLET: FOOTER
+    */
+
+    footer {
+        padding: 50px 0 30px 0;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 992px) {
+    /*
+        DESKTOP: HEADER
+    */
+
+    .header {
+        padding: 50px 15px 30px 15px;
+    }
+
+    /*
+        DESKTOP: HOME
+    */
+
+    .home-row {
+        opacity: 0.85;
+        padding: 0 15px;
+        margin-bottom: 25px;
+    }
+
+    /*
+        DESKTOP: WORK
+    */
+
+    .work-image {
+        min-height: 530px;
+    }
+
+    .work-body p,
+    .work-body blockquote {
+        width: 55%;
+    }
+
+    .work-body .spacer {
+        margin: 4em auto 1em;
+        height: 0.3em;
+    }
+
+    /*
+        DESKTOP: FOOTER
+    */
+    footer {
+        padding: 70px 0 50px 0;
+    }
+}
